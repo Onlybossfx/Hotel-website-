@@ -1,0 +1,277 @@
+/* ===== RESPONSIVE STYLES ===== */
+
+/* Large devices (desktops, less than 1200px) */
+@media (max-width: 1199.98px) {
+    .container {
+        max-width: 960px;
+    }
+    
+    h1 {
+        font-size: 3rem;
+    }
+    
+    h2 {
+        font-size: 2.5rem;
+    }
+}
+
+/* Medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) {
+    .container {
+        max-width: 720px;
+    }
+    
+    h1 {
+        font-size: 2.6rem;
+    }
+    
+    h2 {
+        font-size: 2.2rem;
+    }
+    
+    .nav-links li {
+        margin-left: 25px;
+    }
+    
+    .amenity-display {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .amenity-img {
+        order: -1;
+        height: 300px;
+    }
+    
+    .location-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    /* Map fixes for tablet */
+    .map-column {
+        height: 400px;
+    }
+    
+    .map-container {
+        height: 100%;
+    }
+}
+
+/* Small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) {
+    .container {
+        max-width: 540px;
+    }
+    
+    section {
+        padding: 60px 0;
+    }
+    
+    h1 {
+        font-size: 2.3rem;
+    }
+    
+    h2 {
+        font-size: 2rem;
+        margin-bottom: 30px;
+    }
+    
+    .hero h1 {
+        font-size: 2.8rem;
+    }
+    
+    .hero .lead {
+        font-size: 1.2rem;
+    }
+    
+    /* Map fixes for mobile */
+    .map-container {
+        position: relative;
+        overflow: hidden;
+        padding-top: 75%; /* 4:3 Aspect Ratio */
+        height: 0;
+    }
+    
+    .map-container iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100% !important;
+        height: 100% !important;
+        border: 0;
+    }
+    
+    .map-column {
+        height: auto;
+    }
+    
+    /* Navigation for mobile */
+    .hamburger {
+        display: block;
+    }
+    
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 70%;
+        height: 100vh;
+        background-color: var(--soft-black);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: right 0.5s ease;
+        z-index: 1000;
+        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.2);
+    }
+    
+    .nav-links.active {
+        right: 0;
+    }
+    
+    .nav-links li {
+        margin: 15px 0;
+        margin-left: 0;
+    }
+    
+    .nav-links a {
+        font-size: 1.2rem;
+    }
+    
+    .book-nav {
+        margin-left: 0;
+        margin-top: 20px;
+    }
+    
+    .rooms-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+    
+    .slide-controls {
+        display: none;
+    }
+}
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+    .container {
+        padding: 0 15px;
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
+    
+    h2 {
+        font-size: 1.8rem;
+    }
+    
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+    
+    .hero .lead {
+        font-size: 1.1rem;
+    }
+    
+    /* Additional map fixes for very small screens */
+    .map-container {
+        padding-top: 100%; /* 1:1 Aspect Ratio for very small screens */
+    }
+    
+    .links-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .amenities-tabs {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .amenity-tab {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .contact-form-container {
+        padding: 30px 20px;
+    }
+    
+    .booking-placeholder {
+        padding: 30px 20px;
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    .footer-column h4::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    .social-links {
+        justify-content: center;
+    }
+    
+    .newsletter-form {
+        justify-content: center;
+    }
+}
+
+/* Very small devices (less than 400px) */
+@media (max-width: 399.98px) {
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+    
+    .btn {
+        padding: 12px 25px;
+    }
+    
+    .room-actions {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .room-actions .btn {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* Additional map overflow protection */
+@media (max-width: 991.98px) {
+    .map-container {
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .map-container iframe {
+        width: 100% !important;
+        max-width: 100%;
+    }
+}
+
+/* Prevent horizontal scroll on all devices */
+@media (max-width: 767.98px) {
+    body {
+        overflow-x: hidden;
+        width: 100%;
+    }
+    
+    .container {
+        overflow: hidden;
+    }
+    
+    .map-column, .map-container {
+        max-width: 100%;
+        overflow: hidden;
+    }
+}
