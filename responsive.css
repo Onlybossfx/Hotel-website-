@@ -117,13 +117,14 @@
         right: -100%;
         width: 70%;
         height: 100vh;
-        background-color: var(--soft-black);
+        background-color: var(--charcoal) !important; /* Updated to use charcoal */
         flex-direction: column;
         justify-content: center;
         align-items: center;
         transition: right 0.5s ease;
         z-index: 1000;
-        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.2);
+        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.5);
+        padding-top: 80px;
     }
     
     .nav-links.active {
@@ -133,15 +134,27 @@
     .nav-links li {
         margin: 15px 0;
         margin-left: 0;
+        width: 100%;
+        text-align: center;
     }
     
     .nav-links a {
         font-size: 1.2rem;
+        padding: 10px 0;
+        display: block;
+        width: 100%;
     }
     
     .book-nav {
         margin-left: 0;
         margin-top: 20px;
+        background-color: var(--gold);
+        color: var(--dark);
+        padding: 12px 30px;
+        border-radius: 4px;
+        font-weight: 600;
+        width: 80%;
+        margin: 20px auto;
     }
     
     .rooms-container {
@@ -243,6 +256,11 @@
     .room-actions .btn {
         width: 100%;
         text-align: center;
+    }
+    
+    /* Make mobile nav full width on very small screens */
+    .nav-links {
+        width: 100% !important;
     }
 }
 
